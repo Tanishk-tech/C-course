@@ -20,7 +20,7 @@ void display(int p[],int n)
 }
 int deletion(int p[],int n,int index)
 {
-    for(int i=index;i<=n-1;i++)
+    for(int i=index;i<=n-2;i++)
     {
         p[i]=p[i+1];
     }
@@ -37,6 +37,7 @@ main()
     cout<<"enter index where you delete element "<<endl;
     cin>>index;
     deletion(a,n,index);
-    n=n-1;
+    n--;
+    
     display(a,n);
 }

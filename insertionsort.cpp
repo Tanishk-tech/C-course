@@ -22,9 +22,9 @@ void insertionsort(int p[],int n)
 {
     for(int i=1;i<n;i++)
     {
-        int current = p[i];
+       int current = p[i];
         int j=i-1;
-        while(p[j]> current && j>=0)
+        while(p[j] > current && j>=0)
         {
             p[j+1]= p[j];
             j--;

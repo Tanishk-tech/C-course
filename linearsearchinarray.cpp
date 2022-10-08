@@ -26,11 +26,13 @@ int linearsearch(int p[],int n, int key)
         return (i);
      }
     }
+    cout<<"if element no present in array then index is 6"<<endl;
+    return(6);
 }
  int main()
 {
     int a[100];
-    int num,n,index,key;
+    int num,n,key;
     cout<<"size of array:"<<endl;
     cin>>n;
     input(a,n);

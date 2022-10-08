@@ -23,27 +23,29 @@ void display(int p[],int n)
 }
 
 int binarysearch(int p[],int n,int key)
-{   int mid;
+{   
     int s=0; //s is starting element//
     int e=n-1; //e is ending element //
+    int mid=(s+e)/2;
     while(p[mid] != key)
     {
-        mid=(s+e)/2;
-        if(mid>key)
+      mid=(s+e)/2;
+    if(mid>key)
       {
         e=mid-1;
       }
-        if(mid<key)
-         {
+    if(mid<key)
+      {
            s=mid+1;  
-         }
+      }
+     mid=(s+e)/2;
     
     }
     if(p[mid]==key)
     {
         return (mid);
     }
-   return(1);
+   
 }
 
 main()
@@ -53,7 +55,7 @@ main()
     cout<<"size of array:"<<endl;
     cin>>n;
     input(a,n);
-    sort(a,a+n);
+   
     display(a,n);
     int t=binarysearch(a,n,key);
     cout<<"index of key element is :"<<t;
